@@ -1,0 +1,6 @@
+# Arithmetic Progression
+a = 20000
+d = 400
+n = 61
+nth_term = a+(n-1)*d
+print("The 61st term of AP is-",nth_term)
