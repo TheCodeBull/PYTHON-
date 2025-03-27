@@ -1,5 +1,29 @@
-num = 21
+# IF :-
+a = 25
+if a >= 20 :
+    print("a is greater than 20")
+print("END"
 
+# Else:-
+num = 12
+if num == 10:
+     print("num is 10")
+else:
+  print("num is not 10")
+print("End")
+
+#Elif :-
+x = 45
+if x
+
+
+
+
+
+
+
+# Nested If-Else :-
+num = 21
 if num >= 15:
   print("Greater than or equal to 15")
   if num % 2 == 0:
@@ -8,5 +32,4 @@ if num >= 15:
     print("Odd")
 else:
   print("Less than 15")
-
 print("Program Ended") 
