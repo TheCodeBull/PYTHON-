@@ -4,3 +4,11 @@ d = 400
 n = 61
 nth_term = a+(n-1)*d
 print("The 61st term of AP is-",nth_term)
+
+#Geometric Progression
+a = 5000  	
+r = 2  		
+n = 11    	
+nth_term = a * (r ** (n - 1))
+print("The 11th term of the geometric progression is: ", nth_term)
+
