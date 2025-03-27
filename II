@@ -1,0 +1,10 @@
+A=22
+B=28
+res1= A+B
+res2=A-B
+res3=A*B
+res4(A/B)
+print(res1)
+print(res2)
+print(res3)
+print(res4)
