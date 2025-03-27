@@ -1,0 +1,16 @@
+#first -
+print("hello world")
+
+#Second -
+a= "hello world"
+print(a)
+b=23
+print(b)
+
+#Third -
+a=input()
+print(a)
+b=input("Enter value for b-")
+print(b)
+c=int(input("Enter c-")
+print(c+1)
