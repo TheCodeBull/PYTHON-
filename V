@@ -1,0 +1,9 @@
+s=str(input("s="))
+n=int(input("n="))
+f=float(input("f="))
+
+print(s)
+
+print(n+10)
+
+print(f*10)
