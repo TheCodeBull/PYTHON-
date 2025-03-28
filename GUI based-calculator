@@ -1,0 +1,51 @@
+import tkinter as tk
+
+# Function to update the display when buttons are clicked
+def button_click(value):
+    current = display.get()
+    display.delete(0, tk.END)  # Clear the display
+    display.insert(tk.END, current + value)
+
+# Function to evaluate the expression
+def button_equal():
+    try:
+        result = eval(display.get())  # Evaluate the mathematical expression
+        display.delete(0, tk.END)
+        display.insert(tk.END, result)
+    except Exception as e:
+        display.delete(0, tk.END)
+        display.insert(tk.END, "Error")
+
+# Function to clear the display
+def button_clear():
+    display.delete(0, tk.END)
+
+# Create the main window
+root = tk.Tk()
+root.title("Calculator")  # Window title
+
+# Create the display entry widget (where the input will be shown)
+display = tk.Entry(root, width=16, font=("Arial", 24), borderwidth=2, relief="solid", justify="right")
+display.grid(row=0, column=0, columnspan=4)
+
+# Button layout and creation
+buttons = [
+    ("7", 1, 0), ("8", 1, 1), ("9", 1, 2), ("/", 1, 3),
+    ("4", 2, 0), ("5", 2, 1), ("6", 2, 2), ("*", 2, 3),
+    ("1", 3, 0), ("2", 3, 1), ("3", 3, 2), ("-", 3, 3),
+    ("0", 4, 0), (".", 4, 1), ("=", 4, 2), ("+", 4, 3),
+    ("C", 5, 0)
+]
+
+# Add buttons to the window
+for (text, row, col) in buttons:
+    if text == "=":
+        btn = tk.Button(root, text=text, width=10, height=3, font=("Arial", 18), command=button_equal)
+    elif text == "C":
+        btn = tk.Button(root, text=text, width=10, height=3, font=("Arial", 18), command=button_clear)
+    else:
+        btn = tk.Button(root, text=text, width=10, height=3, font=("Arial", 18), command=lambda value=text: button_click(value))
+    btn.grid(row=row, column=col)
+
+# Run the application
+root.mainloop()
